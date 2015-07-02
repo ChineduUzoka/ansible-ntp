@@ -1,7 +1,8 @@
 {{ ansible_managed }}
 
+{% if ntp_tinker %}
 tinker {{ ntp_tinker }}
-
+{% endif %}   
 driftfile {{ ntp_driftfile }}
 {% for i in ntp_server %}
 server {{ i }}

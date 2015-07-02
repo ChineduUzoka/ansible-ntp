@@ -16,15 +16,16 @@ The variables that can be passed to this role and a brief description about
 them are as follows. See the NTP configuration documentation for details:
 
 	# The driftfile
+        ntp_tinker: "panic 0"
 	ntp_driftfile: /var/lib/ntp/drifta
 
 	# The server to sync time with
 	ntp_server: [0.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
 
 	ntp_restrict:                                                           
-	  - "restrict -4 default kod notrap nomodify nopeer noquery"
-	  - "restrict -6 default kod notrap nomodify nopeer noquery"
-	  - "restrict 127.0.0.1"
+	  - "-4 default kod notrap nomodify nopeer noquery"
+	  - "-6 default kod notrap nomodify nopeer noquery"
+	  - "127.0.0.1"
 
 	ntp_crypto: no
 	ntp_includefile: no

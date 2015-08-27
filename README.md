@@ -67,5 +67,5 @@ BSD
 Author Information
 ------------------
 
-Benno Joy
+Chinedu Uzoka	
 
